@@ -9,16 +9,37 @@ struct ComplexNumber mult2(struct ComplexNumber a,struct ComplexNumber b);
 struct ComplexNumber square(struct ComplexNumber a);
 struct ComplexNumber add2(struct ComplexNumber a, struct ComplexNumber b);
 struct ComplexNumber juliamap(struct ComplexNumber z, struct ComplexNumber c);
-char* complex_to_str(struct ComplexNumber z); 
+char ** complex_to_str(struct ComplexNumber z); 
+void test(void);
 
 int main(void){
+	test();
 	return 0;
 }
 
-char* complex_to_str(struct ComplexNumber z){
-	char tagstr[160];
+
+void test(void){
+	struct ComplexNumber a;
+	struct ComplexNumber b;
+	a.x=1;
+	a.y=2;
+	b.x=3;
+	b.y=4;
+		
+	struct ComplexNumber result;
+	result = mult2(a,b);
+
+	char* f = complex_to_str(result); 
+	
+	printf("result: %s\n", f);
+
+}
+
+char ** complex_to_str(struct ComplexNumber z){
+	char  tagstr[160];
 	sprintf(tagstr, "%d+%di", z.x, z.y);
-	return tagstr;
+	printf("String %s \n", tagstr);
+	return & tagstr;
 }
 
 struct ComplexNumber juliamap(struct ComplexNumber z, struct ComplexNumber c){
