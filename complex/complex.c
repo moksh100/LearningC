@@ -30,8 +30,14 @@ void test(void){
 	result = mult2(a,b);
 
 	char* f = complex_to_str(result); 
-	
-	printf("result: %s\n", f);
+	printf("result mult2 %s\n",f);
+	result = square(a);	
+	printf("result square: %s\n", complex_to_str(result));
+
+	result = add2(a,b);
+	printf("result add2: %s\n", complex_to_str(result));
+	result = juliamap(a,b);
+	printf("result juliamap: %s\n", complex_to_str(result));
 
 }
 
