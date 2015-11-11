@@ -31,8 +31,3 @@ MATRIX matprod(MATRIX m1, MATRIX m2){
 
 }
 
-int main(void)
-{
-
-    return 0;
-}
