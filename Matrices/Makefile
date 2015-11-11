@@ -1,1 +1,1 @@
-all: matrices
+all: test_matrix
