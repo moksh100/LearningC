@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "matrices.h"
 
-
 MATRIX matprod(MATRIX m1, MATRIX m2){
 	MATRIX result;
 	if(m1.cols != m2.rows){
