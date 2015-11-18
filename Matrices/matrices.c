@@ -15,16 +15,16 @@ MATRIX matprod(MATRIX m1, MATRIX m2){
 	   int i, c, a;  	
 	   for (i=0; i<m1.rows; i++)
     	   {
-		for (c=0;c<m2.rows; c++){
-			for(a=0; a<m1.cols; a++){
-				long double a1= *(m1.mat+a+i);
+		for (c=0;c<m2.cols; c++){
+			for(a=0; a<m1.rows; a++){
+				long double a1= *(m1.mat+i+a);
 				long double a2 =*(m2.mat+a+c); 
 				r = r+(a1*a2);
 			}
-			result.cols=result.cols+1;
+			result.rows=result.rows+1;			
 			*(result.mat+i+c)= r;
 		}
-		result.rows=result.rows+1;
+		result.cols=result.cols+1;
 	   }
 	}	
 	return result;
