@@ -1,0 +1,43 @@
+C
+struct vec3 {
+    long double x;
+    long double y;
+    long double z;
+};
+// alias the type "VEC3" to mean "struct vec3"
+typedef struct vec3 VEC3;
+
+// declare and alias a new struct type "struct vec2" as "VEC2"
+typedef struct vec2 {
+    long double x;
+    long double y;
+} VEC2;
+
+C++
+
+struct VEC3 {
+    long double x;
+    long double y;
+    long double z;
+};
+
+struct VEC2 {
+    long double x;
+    long double y;
+};
+
+
+Difference: typedef for alias
+
+
+C    
+VEC3 v, vprime;
+VEC2 w;
+
+c++
+VEC3 v = VEC3();
+VEC3 vprime = VEC3()
+
+Difference: require constructor call
+
+
